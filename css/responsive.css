@@ -193,8 +193,9 @@
   }
   
   .nav-actions .btn-quote,
-  .nav-actions #search-btn,
-  .nav-actions #lang-btn {
+  .nav-actions .btn-login,
+  .nav-actions #lang-btn,
+  .nav-actions #theme-toggle {
     display: none !important;
   }
 
@@ -276,7 +277,14 @@
   }
   
   .nav-actions {
-    display: none !important; /* Hide completely on very small screens to fit logo and hamburger */
+    display: flex !important;
+  }
+  
+  .nav-actions .btn-quote,
+  .nav-actions .btn-login,
+  .nav-actions #lang-btn,
+  .nav-actions #theme-toggle {
+    display: none !important;
   }
   
   .hud-terminal-card {

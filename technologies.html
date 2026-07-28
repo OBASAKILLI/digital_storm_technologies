@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise Technology Stack — Digital Storm Technologies</title>
+  <meta name="description" content="Explore Digital Storm's sovereign technology stack: .NET 8, Blazor, C#, PostgreSQL, React, Flutter, Kafka, Kubernetes, and Azure." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="site-logo-img" />
+      </a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+          <li class="nav-item active"><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav-icon-btn" id="theme-switcher-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="contact.html" class="btn btn-primary btn-quote">Request Quote</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="section-tag">HANDCRAFTED ENGINES</div>
+        <h1 class="page-banner-title">Our Sovereign Technology Stack</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span style="color:#FFF;">Technologies</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH CATEGORIES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-tag">MISSION CRITICAL TOOLS</div>
+          <h2 class="section-title">High-Throughput Distributed Systems</h2>
+          <p class="section-desc">We select technologies based on mathematical performance benchmarks, ACID reliability, and data residency security—not hype.</p>
+        </div>
+
+        <div class="grid-2" style="gap: 3rem;">
+          <!-- 1. Backend & Ledgers -->
+          <div class="glass-card reveal-up">
+            <h3 style="font-size:1.6rem; color:var(--orange); margin-bottom:1rem;"><i class="fa-solid fa-server"></i> Core Backend & Ledgers</h3>
+            <p style="margin-bottom:1.25rem;">Handcrafted for sub-millisecond ACID transactions and zero-trust authentication across African financial institutions.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+              <span class="hud-tech-badge">.NET 8 (C#)</span>
+              <span class="hud-tech-badge">ASP.NET Core Minimal APIs</span>
+              <span class="hud-tech-badge">Apache Kafka Event Streams</span>
+              <span class="hud-tech-badge">SignalR Realtime WebSockets</span>
+              <span class="hud-tech-badge">Entity Framework Core 8</span>
+              <span class="hud-tech-badge">Node.js / Express (Microservices)</span>
+              <span class="hud-tech-badge">Python (AI Actuarial Engines)</span>
+            </div>
+          </div>
+
+          <!-- 2. Frontend & Glassmorphism -->
+          <div class="glass-card reveal-up">
+            <h3 style="font-size:1.6rem; color:#10B981; margin-bottom:1rem;"><i class="fa-solid fa-desktop"></i> Frontend & Executive HUDs</h3>
+            <p style="margin-bottom:1.25rem;">Lightning-fast, accessible interfaces built on vanilla ES2024 and Blazor WebAssembly without CSS bloat.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+              <span class="hud-tech-badge">Vanilla JavaScript (ES2024)</span>
+              <span class="hud-tech-badge">Blazor WebAssembly (.NET)</span>
+              <span class="hud-tech-badge">Handcrafted Vanilla CSS3</span>
+              <span class="hud-tech-badge">HTML5 Semantic Web</span>
+              <span class="hud-tech-badge">React 18 / Next.js (Client Portals)</span>
+              <span class="hud-tech-badge">HTML5 Canvas 2D Physics</span>
+            </div>
+          </div>
+
+          <!-- 3. Database & Caching -->
+          <div class="glass-card reveal-up">
+            <h3 style="font-size:1.6rem; color:#3B82F6; margin-bottom:1rem;"><i class="fa-solid fa-database"></i> Database & Sovereign Storage</h3>
+            <p style="margin-bottom:1.25rem;">Multi-master replication with offline-first SQLite edge caching for rural clinics and customs border posts.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+              <span class="hud-tech-badge">PostgreSQL 16 (Multi-Master)</span>
+              <span class="hud-tech-badge">Microsoft SQL Server Enterprise</span>
+              <span class="hud-tech-badge">Redis Distributed Cache</span>
+              <span class="hud-tech-badge">SQLite 3 (Offline Edge Replication)</span>
+              <span class="hud-tech-badge">Oracle 19c Financial Ledger</span>
+            </div>
+          </div>
+
+          <!-- 4. Cloud & DevOps -->
+          <div class="glass-card reveal-up">
+            <h3 style="font-size:1.6rem; color:#F59E0B; margin-bottom:1rem;"><i class="fa-solid fa-cloud"></i> Cloud, DevOps & Security</h3>
+            <p style="margin-bottom:1.25rem;">Containerized microservices with zero-trust MTLS microsegmentation across AWS Africa and Azure.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+              <span class="hud-tech-badge">Docker Containers</span>
+              <span class="hud-tech-badge">Kubernetes (K8s) GitOps</span>
+              <span class="hud-tech-badge">AWS Africa (Cape Town Region)</span>
+              <span class="hud-tech-badge">Microsoft Azure Sovereign Cloud</span>
+              <span class="hud-tech-badge">Mutual TLS (mTLS) Zero-Trust</span>
+              <span class="hud-tech-badge">GitHub Actions CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENCHMARK COMPARISON -->
+        <div class="glass-card reveal-up" style="margin-top: 4rem; border-color: var(--orange-glow);">
+          <div class="section-tag" style="margin-bottom:1rem;">MATHEMATICAL BENCHMARKING</div>
+          <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Why We Standardize on .NET 8 & Blazor</h3>
+          <p style="margin-bottom: 2rem; max-width: 800px;">
+            In rigorous stress tests across simulated African 3G/4G satellite networks, our handcrafted .NET 8 minimal APIs outperformed traditional interpreted frameworks by up to **420% in throughput** while consuming **65% less memory**.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 700px;">
+            <div>
+              <div style="display:flex; justify-content:space-between; font-family:var(--font-code); font-size:0.85rem; margin-bottom:0.3rem;">
+                <span style="color:var(--orange);">DIGITAL STORM (.NET 8 MINIMAL APIS)</span>
+                <span>142,000 req/sec (0.8ms latency)</span>
+              </div>
+              <div style="width:100%; height:12px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:hidden;">
+                <div style="width:100%; height:100%; background:var(--orange); box-shadow: 0 0 10px var(--orange-glow);"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-family:var(--font-code); font-size:0.85rem; margin-bottom:0.3rem;">
+                <span style="color:var(--white-alpha-70);">LEGACY JAVA SPRING BOOT MONOLITH</span>
+                <span>41,000 req/sec (3.4ms latency)</span>
+              </div>
+              <div style="width:100%; height:12px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:hidden;">
+                <div style="width:29%; height:100%; background:#64748B;"></div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-family:var(--font-code); font-size:0.85rem; margin-bottom:0.3rem;">
+                <span style="color:var(--white-alpha-70);">INTERPRETED NODE.JS EXPRESS</span>
+                <span>33,500 req/sec (4.8ms latency)</span>
+              </div>
+              <div style="width:100%; height:12px; background:rgba(255,255,255,0.06); border-radius:6px; overflow:hidden;">
+                <div style="width:23%; height:100%; background:#475569;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>&copy; 2026 Digital Storm Technologies. All Rights Reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

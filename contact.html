@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Digital Storm Technologies — Nairobi HQ, Kenya</title>
+  <meta name="description" content="Contact Digital Storm Technologies. Connect with our premier enterprise engineering team at Nairobi Headquarters, Kenya." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="site-logo-img" />
+      </a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+          <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav-icon-btn" id="theme-switcher-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="#rfp" class="btn btn-primary btn-quote">Request Quote</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="section-tag">GLOBAL & AFRICAN LIAISON</div>
+        <h1 class="page-banner-title">Connect With Our Chief Architects</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span style="color:#FFF;">Contact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE CLOCKS & DIRECT CHAT CHANNELS -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-4" style="margin-bottom: 3.5rem; gap: 1.25rem;">
+          <!-- Nairobi HQ Clock -->
+          <div class="glass-card" style="text-align: center; padding: 1.25rem;">
+            <div style="font-family:var(--font-code); font-size:0.78rem; color:var(--orange); margin-bottom:0.3rem;">NAIROBI HQ (EAT - UTC+3)</div>
+            <div style="font-size:1.6rem; font-weight:700; font-family:var(--font-heading); color:#FFF;" id="clock-nairobi">15:30:00</div>
+            <div style="font-size:0.82rem; color:#4ADE80; margin-top:0.3rem;"><i class="fa-solid fa-circle-check"></i> HQ SLA ONLINE 24/7</div>
+          </div>
+          <!-- Mombasa Clock -->
+          <div class="glass-card" style="text-align: center; padding: 1.25rem;">
+            <div style="font-family:var(--font-code); font-size:0.78rem; color:#3B82F6; margin-bottom:0.3rem;">MOMBASA COASTAL HUB (EAT)</div>
+            <div style="font-size:1.6rem; font-weight:700; font-family:var(--font-heading); color:#FFF;" id="clock-lagos">15:30:00</div>
+            <div style="font-size:0.82rem; color:#4ADE80; margin-top:0.3rem;"><i class="fa-solid fa-circle-check"></i> MARITIME & PORT SYSTEMS</div>
+          </div>
+          <!-- Kisumu Clock -->
+          <div class="glass-card" style="text-align: center; padding: 1.25rem;">
+            <div style="font-family:var(--font-code); font-size:0.78rem; color:#F59E0B; margin-bottom:0.3rem;">KISUMU WESTERN HUB (EAT)</div>
+            <div style="font-size:1.6rem; font-weight:700; font-family:var(--font-heading); color:#FFF;" id="clock-jhb">15:30:00</div>
+            <div style="font-size:0.82rem; color:#4ADE80; margin-top:0.3rem;"><i class="fa-solid fa-circle-check"></i> CLINICAL & AGRITECH HUB</div>
+          </div>
+          <!-- Eldoret Clock -->
+          <div class="glass-card" style="text-align: center; padding: 1.25rem;">
+            <div style="font-family:var(--font-code); font-size:0.78rem; color:#EC4899; margin-bottom:0.3rem;">ELDORET R&D CENTER (EAT)</div>
+            <div style="font-size:1.6rem; font-weight:700; font-family:var(--font-heading); color:#FFF;" id="clock-london">15:30:00</div>
+            <div style="font-size:0.82rem; color:#4ADE80; margin-top:0.3rem;"><i class="fa-solid fa-circle-check"></i> ENGINEERING NODE ACTIVE</div>
+          </div>
+        </div>
+
+        <!-- GLOBE + CONTACT FORM DUAL GRID -->
+        <div class="grid-2" style="align-items: flex-start; gap: 3.5rem;" id="rfp">
+          <!-- 1. Interactive 3D Spinning Globe & Office Cards -->
+          <div class="reveal-left">
+            <div class="section-tag">SOVEREIGN KENYA HEADQUARTERS</div>
+            <h2 class="section-title">Kenyan Engineering Network</h2>
+            <p style="margin-bottom: 2rem;">
+              Interactive wireframe sphere rendering our sovereign Nairobi headquarters and regional Kenyan operations across Mombasa, Kisumu, and Eldoret.
+            </p>
+            <div style="text-align: center; background: radial-gradient(circle, rgba(221,122,40,0.08), transparent 70%); border-radius: 50%; padding: 1rem; margin-bottom: 2.5rem;">
+              <canvas id="contact-globe-canvas" width="460" height="460" style="max-width:100%;"></canvas>
+            </div>
+
+            <!-- Office Contacts -->
+            <div style="display:flex; flex-direction:column; gap:1.25rem;">
+              <div class="glass-card" style="padding: 1.25rem;">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.4rem;">
+                  <strong style="color:#FFF; font-size:1.1rem;"><i class="fa-solid fa-location-dot" style="color:var(--orange)"></i> Nairobi Headquarters, Kenya</strong>
+                  <span style="font-family:var(--font-code); font-size:0.75rem; color:#4ADE80;">+254 (0) 20 555 9021</span>
+                </div>
+                <div style="font-size:0.9rem; color:var(--white-alpha-70);">Upper Hill Executive Tech Hub, 4th Floor, Nairobi</div>
+              </div>
+              <div class="glass-card" style="padding: 1.25rem;">
+                <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.4rem;">
+                  <strong style="color:#FFF; font-size:1.1rem;"><i class="fa-solid fa-location-dot" style="color:#10B981"></i> Mombasa Coastal Hub, Kenya</strong>
+                  <span style="font-family:var(--font-code); font-size:0.75rem; color:#4ADE80;">+254 (0) 41 222 8000</span>
+                </div>
+                <div style="font-size:0.9rem; color:var(--white-alpha-70);">Nyali Technology Park, Coastal Highway, Mombasa</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. RFP Architecture Discovery Form -->
+          <div class="glass-card reveal-right" style="border-color: var(--orange-glow); padding: 2.5rem;">
+            <div class="section-tag">ENTERPRISE RFP SUBMISSION</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Scope Your Software Project</h3>
+            <p style="color:var(--white-alpha-70); margin-bottom: 1.75rem; font-size: 0.95rem;">
+              Submit your system requirements for direct architectural review by Eng. David Wanjiku or Dr. Amina Kisekka.
+            </p>
+
+            <form id="contact-rfp-form" style="display:flex; flex-direction:column; gap:1.25rem;" onsubmit="event.preventDefault(); alert('Architecture RFP successfully transmitted to Digital Storm Chief Architects! Expect a verified SLA proposal within 4 hours.'); this.reset();">
+              <div>
+                <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Full Name / Executive Title</label>
+                <input type="text" required placeholder="Eng. David Wanjiku — Chief Tech Officer" style="width:100%; padding:0.85rem 1rem; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;" />
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div>
+                  <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Institution / Ministry</label>
+                  <input type="text" required placeholder="Ministry of Health / Equity Bank" style="width:100%; padding:0.85rem 1rem; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;" />
+                </div>
+                <div>
+                  <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Direct Work Email</label>
+                  <input type="email" required placeholder="d.wanjiku@health.gov" style="width:100%; padding:0.85rem 1rem; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;" />
+                </div>
+              </div>
+
+              <div>
+                <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Primary System Category</label>
+                <select style="width:100%; padding:0.85rem 1rem; background:#18181E; border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;">
+                  <option>Healthcare & EHR Ecosystem (MUMCARE Architecture)</option>
+                  <option>Customs & Public Finance Automation (ICTAMS Architecture)</option>
+                  <option>Core Banking & Cooperative Ledger (SACCO Architecture)</option>
+                  <option>AgriTech & Silo Telematics (DAIRY / Pro-Silo)</option>
+                  <option>Sovereign AI Agent / Actuarial Risk Engine</option>
+                  <option>Other Custom Enterprise .NET / Blazor Platform</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Estimated Budget Tier</label>
+                <select style="width:100%; padding:0.85rem 1rem; background:#18181E; border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;">
+                  <option>$45,000 – $75,000 (Custom Enterprise Web Platform)</option>
+                  <option>$85,000 – $160,000 (Core Hospital / Banking ERP)</option>
+                  <option>$150,000 – $300,000+ (National Sovereign Cloud System)</option>
+                </select>
+              </div>
+
+              <div>
+                <label style="font-size:0.85rem; color:var(--white-alpha-90); margin-bottom:0.4rem; display:block;">Architecture Requirements & SLA Timeline</label>
+                <textarea rows="4" required placeholder="Describe target concurrency, offline sync needs, database replication, and statutory compliance deadlines..." style="width:100%; padding:0.85rem 1rem; background:rgba(255,255,255,0.05); border:1px solid var(--glass-border-light); border-radius:8px; color:#FFF; outline:none;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+                <i class="fa-solid fa-paper-plane"></i> Transmit Architecture RFP
+              </button>
+            </form>
+
+            <div style="margin-top: 1.5rem; display:flex; justify-content:center; gap: 1rem; flex-wrap:wrap;">
+              <a href="https://wa.me/254205559021" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem 1rem;">
+                <i class="fa-brands fa-whatsapp" style="color:#25D366"></i> WhatsApp API
+              </a>
+              <button onclick="document.getElementById('storm-orb-btn').click()" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem 1rem;">
+                <i class="fa-solid fa-brain" style="color:var(--orange)"></i> Chat with STORM AI
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>&copy; 2026 Digital Storm Technologies. All Rights Reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script>
+    // Live Clocks updater
+    function updateClocks() {
+      const now = new Date();
+      
+      // UTC+3 (EAT - All Kenya Hubs)
+      const eat = new Date(now.getTime() + (3 * 3600000) + (now.getTimezoneOffset() * 60000));
+      const eatStr = eat.toTimeString().split(' ')[0];
+      const elN = document.getElementById('clock-nairobi');
+      if (elN) elN.innerText = eatStr;
+      const elL = document.getElementById('clock-lagos');
+      if (elL) elL.innerText = eatStr;
+      const elJ = document.getElementById('clock-jhb');
+      if (elJ) elJ.innerText = eatStr;
+      const elLon = document.getElementById('clock-london');
+      if (elLon) elLon.innerText = eatStr;
+    }
+    setInterval(updateClocks, 1000);
+    updateClocks();
+  </script>
+</body>
+</html>

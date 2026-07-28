@@ -1,0 +1,221 @@
+/* ==========================================================================
+   DIGITAL STORM TECHNOLOGIES - INFINITE ANIMATIONS & KEYFRAMES
+   "Engineering Intelligent Software for a Digital Future"
+   ========================================================================== */
+
+/* 1. PULSE & GLOW ANIMATIONS */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 15px rgba(221, 122, 40, 0.4), inset 0 0 10px rgba(221, 122, 40, 0.2);
+    border-color: rgba(221, 122, 40, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(221, 122, 40, 0.85), inset 0 0 20px rgba(221, 122, 40, 0.5);
+    border-color: rgba(221, 122, 40, 0.9);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* 2. FLOATING & LEVITATION PHYSICS */
+@keyframes float-y {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-y-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes float-3d-card {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotateX(3deg) rotateY(-3deg);
+  }
+  66% {
+    transform: translateY(-4px) rotateX(-2deg) rotateY(2deg);
+  }
+}
+
+/* 3. SPIN & ORBIT ANIMATIONS FOR DIGITAL SOLAR SYSTEM */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orbit-cw {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-ccw {
+  from {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+}
+
+/* 4. GRADIENT FLOW & SHIMMER EFFECT */
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(45deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(270deg, #FFFFFF, var(--orange), #FFFFFF, var(--cream));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+/* 5. AUDIO SPEECH / VOICE WAVE BAR ANIMATIONS */
+@keyframes audio-wave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 22px;
+  }
+}
+
+.voice-wave-bar {
+  display: inline-block;
+  width: 3px;
+  height: 6px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 0 1px;
+  animation: audio-wave 1s ease-in-out infinite;
+}
+.voice-wave-bar:nth-child(2) { animation-delay: 0.2s; }
+.voice-wave-bar:nth-child(3) { animation-delay: 0.4s; }
+.voice-wave-bar:nth-child(4) { animation-delay: 0.1s; }
+.voice-wave-bar:nth-child(5) { animation-delay: 0.3s; }
+
+/* 6. CIRCUIT LINE & PARTICLE SIGNAL FLOW */
+@keyframes circuit-flow {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 7. SCROLL REVEAL (AOS EQUIVALENT) CSS CLASSES */
+.reveal-fade,
+.reveal-up,
+.reveal-scale,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translateY(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.92);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* 8. GLOWING NODE PULSE EFFECT FOR INTERACTIVE GRAPHICS */
+.node-pulse {
+  position: relative;
+}
+
+.node-pulse::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--orange);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: pulse-ring 2.5s infinite;
+}

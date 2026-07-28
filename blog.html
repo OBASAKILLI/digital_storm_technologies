@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Blog & Whitepapers — Digital Storm Technologies</title>
+  <meta name="description" content="Technical whitepapers and engineering articles on African distributed systems, .NET 8 core banking, sovereign AI, and zero-trust cybersecurity." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="site-logo-img" />
+      </a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
+          <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" id="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="nav-icon-btn" id="theme-switcher-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <a href="contact.html" class="btn btn-primary btn-quote">Request Quote</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="section-tag">ENGINEERING WHITEPAPERS & BLOG</div>
+        <h1 class="page-banner-title">Architecting African Systems</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span style="color:#FFF;">Blog</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & ARTICLES GRID -->
+    <section class="section">
+      <div class="container">
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom: 3rem; justify-content:center;">
+          <button class="btn btn-primary" style="padding:0.5rem 1.25rem;">All Insights</button>
+          <button class="btn btn-secondary" style="padding:0.5rem 1.25rem;">Distributed Systems</button>
+          <button class="btn btn-secondary" style="padding:0.5rem 1.25rem;">Sovereign AI</button>
+          <button class="btn btn-secondary" style="padding:0.5rem 1.25rem;">Zero-Trust Security</button>
+          <button class="btn btn-secondary" style="padding:0.5rem 1.25rem;">Case Studies</button>
+        </div>
+
+        <div class="grid-3" style="gap:2.5rem;">
+          <!-- Article 1 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:var(--orange);">DISTRIBUTED SYSTEMS • 12 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">Architecting 99.99% Uptime Core Banking in Africa with .NET 8 & PostgreSQL</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              A deep dive into how we handle sub-millisecond ACID transaction ledgers and mobile money SMS gateways across 400+ African cooperatives.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Eng. David Wanjiku</span>
+              <a href="#" style="color:var(--orange); font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:#10B981;">SOVEREIGN AI • 9 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">The Rise of Sovereign AI in African Enterprise: Why Data Residency Matters</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              Why African Ministries of Finance and healthcare networks must train localized AI models without exporting citizen data to foreign public clouds.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Dr. Amina Kisekka</span>
+              <a href="#" style="color:#10B981; font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:#3B82F6;">FRONTEND ARCHITECTURE • 8 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">Why We Rejected Bootstrap & Tailwind: Handcrafting CSS3 for High-Throughput Glassmorphism</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              How removing 400KB of generic utility classes and using vanilla CSS variables unlocked 60fps animations and instant initial page loads.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Eng. Tunde Balogun</span>
+              <a href="#" style="color:#3B82F6; font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:#F59E0B;">HEALTH INFORMATICS • 14 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">MUMCARE: How Edge Offline Replication Saves Lives in Rural Maternity Clinics</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              Examining our SQLite offline-first synchronization architecture that enables uninterrupted clinical triage even during 72-hour network outages.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Dr. Amina Kisekka</span>
+              <a href="#" style="color:#F59E0B; font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:#EC4899;">CYBERSECURITY • 11 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">Zero-Trust mTLS Microsegmentation in Government Customs Automation</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              Protecting $4.2 Billion in annual tax revenue against automated DDoS and credential stuffing attacks using quantum-resistant token gateways.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Eng. David Wanjiku</span>
+              <a href="#" style="color:#EC4899; font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="glass-card reveal-up">
+            <span style="font-family:var(--font-code); font-size:0.75rem; color:#8B5CF6;">FINTECH MATHEMATICS • 10 MIN READ</span>
+            <h3 style="font-size:1.45rem; margin:0.75rem 0 1rem;">The Mathematics of SACCO Micro-Lending: SMS Credit Scoring in 90 Seconds</h3>
+            <p style="font-size:0.95rem; margin-bottom:1.5rem; color:var(--white-alpha-90);">
+              How our actuarial machine learning classifier evaluates cooperative dividend histories to authorize zero-default instant mobile loans.
+            </p>
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--glass-border-light); padding-top:1rem; font-size:0.85rem; color:var(--white-alpha-70);">
+              <span>By Eng. Tunde Balogun</span>
+              <a href="#" style="color:#8B5CF6; font-weight:600;">Read Whitepaper &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none;">
+        <div>&copy; 2026 Digital Storm Technologies. All Rights Reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/particles.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

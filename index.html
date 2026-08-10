@@ -45,13 +45,28 @@
       </div>
     </a>
 
-    <nav class="nav-links" role="navigation" aria-label="Main Navigation">
-      <a href="index.html"         class="nav-link active">Home</a>
-      <a href="services.html"      class="nav-link">Services</a>
-      <a href="solutions.html"     class="nav-link">Solutions</a>
-      <a href="portfolio.html"     class="nav-link">Portfolio</a>
-      <a href="about.html"         class="nav-link">About</a>
-      <a href="contact.html"       class="nav-link">Contact</a>
+        <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link active" id="nav-desk-index">Home</a>
+      <a href="services.html" class="nav-link" id="nav-desk-services">Services</a>
+      <a href="portfolio.html" class="nav-link" id="nav-desk-portfolio">Portfolio</a>
+      
+      <div class="nav-dropdown">
+        <button class="nav-link" id="nav-desk-company">Company <i class="fa-solid fa-chevron-down" style="font-size:0.75rem; margin-left:0.25rem;"></i></button>
+        <div class="dropdown-menu">
+          <a href="about.html" id="drop-about">About Us</a>
+          <a href="careers.html" id="drop-careers">Careers</a>
+          <a href="industries.html" id="drop-industries">Industries</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <button class="nav-link" id="nav-desk-resources">Resources <i class="fa-solid fa-chevron-down" style="font-size:0.75rem; margin-left:0.25rem;"></i></button>
+        <div class="dropdown-menu">
+          <a href="solutions.html" id="drop-solutions">Solutions</a>
+          <a href="technologies.html" id="drop-technologies">Tech Stack</a>
+          <a href="blog.html" id="drop-blog">Blog</a>
+        </div>
+      </div>
     </nav>
 
     <div class="nav-actions">
@@ -869,3 +884,4 @@
 </script>
 </body>
 </html>
+

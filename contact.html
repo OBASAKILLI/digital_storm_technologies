@@ -220,9 +220,61 @@
     }
   });
 </script>
-</body>
+
 </html>
 
 
 
 
+
+<!-- Mobile App Bottom Navigation -->
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="mobile-nav-item" id="nav-index"><i class="fa-solid fa-house"></i><span>Home</span></a>
+  <a href="services.html" class="mobile-nav-item" id="nav-services"><i class="fa-solid fa-layer-group"></i><span>Services</span></a>
+  <a href="portfolio.html" class="mobile-nav-item" id="nav-portfolio"><i class="fa-solid fa-briefcase"></i><span>Portfolio</span></a>
+  <a href="contact.html" class="mobile-nav-item" id="nav-contact" class="mobile-nav-item active"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+  <button class="mobile-nav-item" id="mobile-more-btn" style="background:none;border:none;"><i class="fa-solid fa-bars"></i><span>More</span></button>
+</nav>
+
+<!-- Mobile App "More" Menu Modal -->
+<div class="mobile-more-overlay" id="mobile-more-overlay"></div>
+<div class="mobile-more-menu" id="mobile-more-menu">
+  <div class="mobile-more-menu-header">
+    <div class="mobile-more-menu-title">Menu</div>
+    <button class="mobile-more-close" id="mobile-more-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <a href="about.html" class="mobile-more-link"><i class="fa-solid fa-users"></i> About Us</a>
+  <a href="solutions.html" class="mobile-more-link"><i class="fa-solid fa-industry"></i> Solutions</a>
+  <a href="industries.html" class="mobile-more-link"><i class="fa-solid fa-building"></i> Industries</a>
+  <a href="technologies.html" class="mobile-more-link"><i class="fa-solid fa-microchip"></i> Tech Stack</a>
+  <a href="blog.html" class="mobile-more-link"><i class="fa-solid fa-newspaper"></i> Blog</a>
+  <a href="careers.html" class="mobile-more-link"><i class="fa-solid fa-user-tie"></i> Careers</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const moreBtn = document.getElementById('mobile-more-btn');
+    const moreMenu = document.getElementById('mobile-more-menu');
+    const overlay = document.getElementById('mobile-more-overlay');
+    const closeBtn = document.getElementById('mobile-more-close');
+
+    if(moreBtn && moreMenu && overlay) {
+      const openMenu = () => {
+        overlay.classList.add('open');
+        moreMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+      
+      const closeMenu = () => {
+        overlay.classList.remove('open');
+        moreMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      moreBtn.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+    }
+  });
+</script>
+</body>

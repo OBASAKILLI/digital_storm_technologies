@@ -133,6 +133,48 @@
     bottom: 1.25rem;
     right: 1.25rem;
   }
+
+  /* ----------------------------------------------------
+     APP UI OVERRIDES (Inserted for App-like feel)
+     ---------------------------------------------------- */
+  body {
+    padding-bottom: 64px; /* Space for bottom nav */
+  }
+
+  .nav-hamburger, .nav-drawer {
+    display: none !important; /* Completely hide standard mobile menu */
+  }
+
+  .mobile-bottom-nav {
+    display: flex; /* Show bottom nav on mobile */
+  }
+
+  /* Make grids horizontally swipeable like native apps */
+  .grid-2, .grid-3, .grid-4 {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem; /* Space for scrollbar if any */
+    margin-right: -1.25rem; /* Break out of container on right */
+    padding-right: 1.25rem; /* Padding at end of scroll */
+  }
+
+  .grid-2 > *, .grid-3 > *, .grid-4 > * {
+    flex: 0 0 85%; /* Cards take up 85% width so user sees next card peaking */
+    scroll-snap-align: start;
+  }
+
+  /* Hide scrollbars for cleaner app look */
+  .grid-2::-webkit-scrollbar, 
+  .grid-3::-webkit-scrollbar, 
+  .grid-4::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
 /* SMALL PHONES (480px and below) */
@@ -191,3 +233,4 @@
   outline: 3px solid var(--orange) !important;
   outline-offset: 3px;
 }
+

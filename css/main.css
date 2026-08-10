@@ -1646,3 +1646,8 @@ ul, ol { list-style: none; }
   color: var(--orange);
   background: var(--bg-card-hover);
 }
+.nav-link.active,
+.nav-dropdown .nav-link.active {
+  color: var(--orange);
+  background: var(--bg-card-hover);
+}

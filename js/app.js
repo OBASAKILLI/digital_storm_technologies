@@ -42,7 +42,7 @@ const ThemeManager = (() => {
 
   function init() {
     const saved = localStorage.getItem(STORAGE_KEY);
-    const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const preferred = 'dark';
     const theme = saved || preferred;
     apply(theme);
 
@@ -338,3 +338,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 });
+

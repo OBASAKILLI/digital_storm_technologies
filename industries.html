@@ -3,205 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>14 African Industry Verticals — Digital Storm Technologies</title>
-  <meta name="description" content="Sovereign software solutions across 14 African verticals: Healthcare, Finance, Agriculture, Education, Government, Transport, Manufacturing, Logistics, and more." />
+  <title>Industries We Serve — Digital Storm Technologies</title>
+  <meta name="description" content="Digital Storm provides tailored tech solutions for retail, healthcare, manufacturing, finance, government, and education in Kenya." />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-  <div class="noise-overlay" aria-hidden="true"></div>
-  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="site-logo-img" />
-      </a>
-      <nav>
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item active"><a href="industries.html" class="nav-link">Industries</a></li>
-          <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
-          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <button class="nav-icon-btn" id="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav-icon-btn" id="theme-switcher-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
-        <a href="contact.html" class="btn btn-primary btn-quote">Request Quote</a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></button>
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="nav-logo-img" />
+      <div class="nav-logo-text">Digital Storm<span>Technologies</span></div>
+    </a>
+    <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="nav-theme-btn theme-toggle-btn"><i class="theme-icon fa-solid fa-moon"></i></button>
+      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem;"><i class="fa-solid fa-bolt"></i> Get a Quote</a>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="solutions.html" class="nav-link">Solutions</a>
+  <a href="portfolio.html" class="nav-link">Portfolio</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:1rem; justify-content:center;"><i class="fa-solid fa-bolt"></i> Get a Quote</a>
+</nav>
+
+<section class="section reveal" id="industries">
+  <div class="container">
+    <div class="section-label">Industries We Serve</div>
+    <h2 class="section-title">Solving Complex Industry Pain Points</h2>
+    <p class="section-desc">Every industry faces unique operational challenges. Our technology is designed to solve them efficiently.</p>
+    
+    <div class="grid-2" style="margin-top: 3.5rem;">
+      <div class="card reveal-left">
+        <h3 class="card-title"><i class="fa-solid fa-store" style="color:var(--blue); margin-right:0.5rem;"></i> Retail</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Inventory shrinkage and slow checkout times.<br/><strong>Solution:</strong> High-speed POS, barcode integration, real-time central stock database, and eTIMS automated receipts.</p>
+      </div>
+
+      <div class="card reveal-right">
+        <h3 class="card-title"><i class="fa-solid fa-stethoscope" style="color:var(--green); margin-right:0.5rem;"></i> Healthcare</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Fragmented patient data and delayed insurance claims.<br/><strong>Solution:</strong> Unified Electronic Health Records (MUMCARE), automated billing, and clinical management tools.</p>
+      </div>
+
+      <div class="card reveal-left">
+        <h3 class="card-title"><i class="fa-solid fa-landmark-dome" style="color:var(--orange); margin-right:0.5rem;"></i> Government</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Revenue leakage and lack of transparency.<br/><strong>Solution:</strong> Secure, auditable revenue collection portals with direct mobile money integrations and real-time dashboards.</p>
+      </div>
+
+      <div class="card reveal-right">
+        <h3 class="card-title"><i class="fa-solid fa-vault" style="color:var(--blue); margin-right:0.5rem;"></i> Finance</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Manual loan processing and delayed disbursements.<br/><strong>Solution:</strong> Automated SACCO management systems with M-Pesa B2C integration for instant loan processing.</p>
+      </div>
+
+      <div class="card reveal-left">
+        <h3 class="card-title"><i class="fa-solid fa-industry" style="color:var(--green); margin-right:0.5rem;"></i> Manufacturing</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Supply chain inefficiencies and complex tax compliance.<br/><strong>Solution:</strong> Full ERP suite covering procurement to payroll, and B2B KRA eTIMS API integration.</p>
+      </div>
+
+      <div class="card reveal-right">
+        <h3 class="card-title"><i class="fa-solid fa-graduation-cap" style="color:var(--orange); margin-right:0.5rem;"></i> Education</h3>
+        <p class="card-desc"><strong>Pain Point:</strong> Difficult fee collection and poor parent communication.<br/><strong>Solution:</strong> Integrated portals for secure fee payments and automated SMS reporting.</p>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="page-banner">
-      <div class="container">
-        <div class="section-tag">PAN-AFRICAN DOMAIN EXPERTISE</div>
-        <h1 class="page-banner-title">14 Specialized Industry Verticals</h1>
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <span>/</span> <span style="color:#FFF;">Industries</span>
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/Digitalblack.png" alt="Digital Storm Technologies" class="nav-logo-img" style="height:32px;" />
+          <div class="nav-logo-text" style="font-size:1rem;">Digital Storm <span>Technologies</span></div>
+        </a>
+        <p>Enterprise software, eTIMS integration, retail POS, and payment gateway solutions — built for businesses in Kenya and East Africa.</p>
+        <div style="margin-top: 1.25rem; display:flex; flex-direction:column; gap:0.4rem; font-size:0.85rem; color:var(--text-muted);">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--orange); margin-right:0.4rem;"></i> Nairobi, Kenya</span>
+          <a href="tel:+254700000000" style="color:var(--text-muted);"><i class="fa-solid fa-phone" style="color:var(--orange); margin-right:0.4rem;"></i> +254 700 000 000</a>
+          <a href="mailto:info@digitalstormtech.co.ke" style="color:var(--text-muted);"><i class="fa-solid fa-envelope" style="color:var(--orange); margin-right:0.4rem;"></i> info@digitalstormtech.co.ke</a>
         </div>
       </div>
-    </section>
-
-    <!-- 14 VERTICALS GRID -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-tag">ENGINEERED FOR REALITY</div>
-          <h2 class="section-title">Institutional Systems for Every Sector</h2>
-          <p class="section-desc">Each vertical features pre-architected compliance rules, local statutory tax integration, and offline-capable edge caching.</p>
-        </div>
-
-        <div class="grid-3" style="gap: 2rem;">
-          <!-- 1. Healthcare -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#10B981;"><i class="fa-solid fa-hospital"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">1. Healthcare & Hospitals</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">MUMCARE decentralized EHR, AI maternal diagnostic triage, and biometric pharmacy POS with NHIF billing.</p>
-            <a href="portfolio.html?id=mumcare" style="color:#10B981; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect Healthcare Case Study &rarr;</a>
-          </div>
-
-          <!-- 2. Finance & SACCOs -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#F59E0B;"><i class="fa-solid fa-vault"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">2. Finance & SACCOs</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">ACID core banking ledgers, mobile loan disbursement engines, and Central Bank statutory reporting.</p>
-            <a href="portfolio.html?id=sacco" style="color:#F59E0B; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect SACCO Case Study &rarr;</a>
-          </div>
-
-          <!-- 3. Government & Customs -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#DD7A28;"><i class="fa-solid fa-flag"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">3. Government & Revenue</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">ICTAMS automated customs declaration, NLP invoice auditing, and sovereign citizen tax portals.</p>
-            <a href="portfolio.html?id=ictams" style="color:#DD7A28; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect ICTAMS Case Study &rarr;</a>
-          </div>
-
-          <!-- 4. Agriculture & Telematics -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#3B82F6;"><i class="fa-solid fa-wheat-awn"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">4. Agriculture & Silos</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Pro-Silo IoT grain reserve monitoring, farmer milk delivery telemetry, and instant SMS payouts.</p>
-            <a href="portfolio.html?id=pro-silo" style="color:#3B82F6; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect AgTech Case Study &rarr;</a>
-          </div>
-
-          <!-- 5. Insurance & Actuarial -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#EC4899;"><i class="fa-solid fa-file-shield"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">5. Insurance & Actuarial</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">AI actuarial claim assessment, automated fraud detection, and instant policy underwriting.</p>
-            <a href="portfolio.html?id=insurance" style="color:#EC4899; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect Insurance Case Study &rarr;</a>
-          </div>
-
-          <!-- 6. Education & Universities -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#8B5CF6;"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">6. Education & Campus</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Unified university ERP, student financial aid ledgers, biometric lecture attendance, and grading portals.</p>
-            <a href="contact.html?industry=education" style="color:#8B5CF6; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope Campus ERP &rarr;</a>
-          </div>
-
-          <!-- 7. Freight & Logistics -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#06B6D4;"><i class="fa-solid fa-truck-fast"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">7. Freight & Logistics</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Relay cross-border fleet telematics, fuel theft anomaly detection, and driver biometric authentication.</p>
-            <a href="portfolio.html?id=relay" style="color:#06B6D4; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect Relay Case Study &rarr;</a>
-          </div>
-
-          <!-- 8. Manufacturing & Supply Chain -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#E11D48;"><i class="fa-solid fa-industry"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">8. Manufacturing & Supply</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">IoT production line telemetry, automated bill-of-materials procurement, and warehouse inventory ERP.</p>
-            <a href="contact.html?industry=manufacturing" style="color:#E11D48; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope Manufacturing ERP &rarr;</a>
-          </div>
-
-          <!-- 9. NGOs & Humanitarian -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#10B981;"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">9. NGOs & Humanitarian</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Multi-donor accounting audit trails, refugee biometric cash transfers, and offline field survey tools.</p>
-            <a href="contact.html?industry=ngo" style="color:#10B981; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope NGO Audit Portal &rarr;</a>
-          </div>
-
-          <!-- 10. Retail & Multi-Branch POS -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#F59E0B;"><i class="fa-solid fa-cart-shopping"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">10. Retail & Multi-Branch POS</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">High-frequency retail POS with offline SQLite replication, barcode scanner support, and real-time stock sync.</p>
-            <a href="contact.html?industry=retail" style="color:#F59E0B; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope Retail POS System &rarr;</a>
-          </div>
-
-          <!-- 11. Hospitality & Tourism -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#DD7A28;"><i class="fa-solid fa-hotel"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">11. Hospitality & Tourism</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Hotel management property systems, game lodge booking engines, and integrated mobile payments.</p>
-            <a href="contact.html?industry=hospitality" style="color:#DD7A28; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope Hospitality PMS &rarr;</a>
-          </div>
-
-          <!-- 12. Real Estate & PropTech -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#3B82F6;"><i class="fa-solid fa-building"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">12. Real Estate & PropTech</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Tenant billing automation, facility maintenance ticket tracking, and digital lease signing portals.</p>
-            <a href="contact.html?industry=realestate" style="color:#3B82F6; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope PropTech Platform &rarr;</a>
-          </div>
-
-          <!-- 13. Energy & Utilities -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#84CC16;"><i class="fa-solid fa-bolt"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">13. Energy & Utilities</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Smart meter IoT telemetry, automated token billing, and grid fault isolation alerting systems.</p>
-            <a href="contact.html?industry=energy" style="color:#84CC16; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Scope Energy IoT Engine &rarr;</a>
-          </div>
-
-          <!-- 14. Capital Markets & Stock Exchanges -->
-          <div class="glass-card reveal-up">
-            <div class="card-icon-wrap" style="color:#E11D48;"><i class="fa-solid fa-chart-pie"></i></div>
-            <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">14. Capital Markets</h3>
-            <p style="font-size:0.92rem; margin-bottom:1rem;">Sub-millisecond clearing ledgers for national stock exchanges, bond auctions, and regulatory surveillance.</p>
-            <a href="portfolio.html?id=cma-kenya" style="color:#E11D48; font-weight:600; font-family:var(--font-btn); font-size:0.85rem;">Inspect CMA Kenya Case Study &rarr;</a>
-          </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="services.html#erp" class="footer-link">Enterprise ERP</a>
+          <a href="services.html#pos" class="footer-link">Retail POS</a>
+          <a href="services.html#etims" class="footer-link">eTIMS Integration</a>
+          <a href="services.html#payments" class="footer-link">Payment Gateways</a>
+          <a href="services.html#healthcare" class="footer-link">Healthcare Systems</a>
+          <a href="services.html#custom" class="footer-link">Custom Software</a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom" style="border-top: none;">
-        <div>&copy; 2026 Digital Storm Technologies. All Rights Reserved.</div>
-        <div style="display:flex; gap:1.5rem;">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="solutions.html">Solutions</a>
-          <a href="contact.html">Contact Us</a>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="blog.html" class="footer-link">Blog</a>
+          <a href="careers.html" class="footer-link">Careers</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a href="solutions.html" class="footer-link">Solutions</a>
+          <a href="industries.html" class="footer-link">Industries</a>
+          <a href="technologies.html" class="footer-link">Technology Stack</a>
+          <a href="contact.html" class="footer-link">Get a Quote</a>
         </div>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Digital Storm Technologies. All rights reserved. | Nairobi, Kenya</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="footer-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="footer-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <script src="js/particles.js" defer></script>
-  <script src="js/portfolio.js" defer></script>
-  <script src="js/chatbot.js" defer></script>
-  <script src="js/animations.js" defer></script>
-  <script src="js/app.js" defer></script>
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="js/app.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('nav-hamburger');
+    const drawer = document.getElementById('nav-drawer');
+    if (hamburger && drawer) {
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.classList.toggle('open');
+        drawer.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    }
+  });
+</script>
 </body>
 </html>

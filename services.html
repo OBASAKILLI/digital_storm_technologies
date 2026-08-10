@@ -3,188 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Software Services — Digital Storm Technologies</title>
-  <meta name="description" content="Sovereign enterprise software services: ERP, CRM, Hospital Systems, SACCO Banking, AI, Cloud, Cybersecurity, DevOps, and System Integration." />
-  
+  <title>Services — Digital Storm Technologies | Enterprise Software, eTIMS & Payment Integration</title>
+  <meta name="description" content="Explore our enterprise software services including ERP, Retail POS, eTIMS KRA integration, and custom payment gateway solutions in Kenya." />
+  <meta name="keywords" content="eTIMS integration Kenya, ERP software Nairobi, Retail POS Kenya, payment gateway M-Pesa, enterprise software Kenya, Digital Storm Technologies" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
-  <div class="noise-overlay" aria-hidden="true"></div>
-  <canvas id="galaxy-canvas" aria-hidden="true"></canvas>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="site-logo-img" />
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/Digitalblack.png" alt="Digital Storm Technologies Logo" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        Digital Storm
+        <span>Technologies</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" role="navigation" aria-label="Main Navigation">
+      <a href="index.html"         class="nav-link">Home</a>
+      <a href="services.html"      class="nav-link active">Services</a>
+      <a href="solutions.html"     class="nav-link">Solutions</a>
+      <a href="portfolio.html"     class="nav-link">Portfolio</a>
+      <a href="about.html"         class="nav-link">About</a>
+      <a href="contact.html"       class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="nav-theme-btn theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light mode">
+        <i class="theme-icon fa-solid fa-moon"></i>
+      </button>
+      <a href="contact.html" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem;">
+        <i class="fa-solid fa-bolt"></i> Get a Quote
       </a>
-      <nav>
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="industries.html" class="nav-link">Industries</a></li>
-          <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
-          <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
-          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="nav-actions">
-        <button class="nav-icon-btn" id="search-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="nav-icon-btn" id="theme-switcher-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
-        <a href="contact.html" class="btn btn-primary btn-quote">Request Quote</a>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<nav class="nav-drawer" id="nav-drawer" aria-label="Mobile Navigation">
+  <a href="index.html"     class="nav-link">Home</a>
+  <a href="services.html"  class="nav-link">Services</a>
+  <a href="solutions.html" class="nav-link">Solutions</a>
+  <a href="portfolio.html" class="nav-link">Portfolio</a>
+  <a href="about.html"     class="nav-link">About</a>
+  <a href="contact.html"   class="nav-link">Contact</a>
+  <a href="contact.html"   class="btn btn-primary" style="margin-top:1rem; justify-content:center;">
+    <i class="fa-solid fa-bolt"></i> Get a Quote
+  </a>
+</nav>
+
+<section class="section" id="erp">
+  <div class="container reveal">
+    <div class="section-label">Our Core Offering</div>
+    <h2 class="section-title">Enterprise ERP</h2>
+    <p class="section-desc">We build complete business management systems for finance, HR, inventory, and procurement, customized specifically to the Kenyan regulatory landscape.</p>
+    <div class="grid-2" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-icon" style="color:var(--orange);"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+            <div class="card-title">Finance & Payroll</div>
+            <p class="card-desc">Fully compliant with KRA PAYE, NSSF, NHIF, and SHIF regulations. Automate your monthly payroll runs.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="color:var(--blue);"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <div class="card-title">Inventory & Supply Chain</div>
+            <p class="card-desc">Real-time stock level monitoring across multiple branches and warehouses to reduce shrinkage.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt reveal" id="pos">
+  <div class="container">
+    <div class="section-label">Point of Sale</div>
+    <h2 class="section-title">Retail POS</h2>
+    <p class="section-desc">Streamline your retail operations with a modern POS system built for speed and integration.</p>
+    <div class="grid-3" style="margin-top: 2rem;">
+        <div class="card reveal-left">
+            <div class="card-title">Multi-branch Ready</div>
+            <p class="card-desc">Sync sales across all your locations natively.</p>
+        </div>
+        <div class="card reveal">
+            <div class="card-title">Barcode Scanning</div>
+            <p class="card-desc">Lightning-fast checkout with integrated barcode scanner support.</p>
+        </div>
+        <div class="card reveal-right">
+            <div class="card-title">Loyalty Programs</div>
+            <p class="card-desc">Built-in points and rewards for your best customers.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="etims">
+  <div class="container">
+    <div class="section-label">Tax Compliance</div>
+    <h2 class="section-title">eTIMS KRA Integration</h2>
+    <p class="section-desc">Complete eTIMS integration to ensure you remain fully compliant with the latest KRA regulations.</p>
+    <div class="grid-4" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-title">1. Registration</div>
+            <p class="card-desc">We handle the KRA registration process for you.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">2. API Setup</div>
+            <p class="card-desc">Connect your current system to the eTIMS API.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">3. Testing</div>
+            <p class="card-desc">Thorough testing with KRA sandboxes.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">4. Go Live</div>
+            <p class="card-desc">Real-time tax invoice generation and signing.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt reveal" id="payments">
+  <div class="container">
+    <div class="section-label">Transactions</div>
+    <h2 class="section-title">Payment Gateways</h2>
+    <p class="section-desc">Integrated local and international payment methods.</p>
+    <div class="grid-3" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-icon" style="color:var(--green);"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div class="card-title">M-Pesa Integration</div>
+            <p class="card-desc">B2C, C2B, STK Push, Paybill, and Till Numbers fully supported.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="color:var(--blue);"><i class="fa-brands fa-cc-visa"></i></div>
+            <div class="card-title">Visa & Mastercard</div>
+            <p class="card-desc">Secure card processing via integrated 3D Secure gateways.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon" style="color:var(--orange);"><i class="fa-solid fa-wallet"></i></div>
+            <div class="card-title">Pesalink & Airtel Money</div>
+            <p class="card-desc">Offer multiple mobile and bank transfer payment options.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="healthcare">
+  <div class="container">
+    <div class="section-label">Healthcare Solutions</div>
+    <h2 class="section-title">MUMCARE</h2>
+    <p class="section-desc">A specialized software suite for clinics, hospitals, and maternal care centers.</p>
+    <div class="grid-2" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-title">Electronic Health Records</div>
+            <p class="card-desc">Secure, accessible patient records with detailed histories.</p>
+        </div>
+        <div class="card">
+            <div class="card-title">Billing & Insurance</div>
+            <p class="card-desc">Automated invoicing and integration with major health insurance providers.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt reveal" id="custom">
+  <div class="container">
+    <div class="section-label">Bespoke Projects</div>
+    <h2 class="section-title">Custom Software</h2>
+    <p class="section-desc">If it doesn't exist, we build it. Specialized systems designed around your unique workflow.</p>
+    <div class="text-center" style="margin-top: 2rem;">
+        <a href="contact.html" class="btn btn-primary">Talk to an Architect</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/Digitalblack.png" alt="Digital Storm Technologies" class="nav-logo-img" style="height:32px;" />
+          <div class="nav-logo-text" style="font-size:1rem;">
+            Digital Storm <span>Technologies</span>
+          </div>
+        </a>
+        <p>
+          Enterprise software, eTIMS integration, retail POS, and payment gateway solutions — built for businesses in Kenya and East Africa.
+        </p>
+        <div style="margin-top: 1.25rem; display:flex; flex-direction:column; gap:0.4rem; font-size:0.85rem; color:var(--text-muted);">
+          <span><i class="fa-solid fa-location-dot" style="color:var(--orange); margin-right:0.4rem;"></i> Nairobi, Kenya</span>
+          <a href="tel:+254700000000" style="color:var(--text-muted);"><i class="fa-solid fa-phone" style="color:var(--orange); margin-right:0.4rem;"></i> +254 700 000 000</a>
+          <a href="mailto:info@digitalstormtech.co.ke" style="color:var(--text-muted);"><i class="fa-solid fa-envelope" style="color:var(--orange); margin-right:0.4rem;"></i> info@digitalstormtech.co.ke</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="services.html#erp"       class="footer-link">Enterprise ERP</a>
+          <a href="services.html#pos"       class="footer-link">Retail POS</a>
+          <a href="services.html#etims"     class="footer-link">eTIMS Integration</a>
+          <a href="services.html#payments"  class="footer-link">Payment Gateways</a>
+          <a href="services.html#healthcare"class="footer-link">Healthcare Systems</a>
+          <a href="services.html#custom"    class="footer-link">Custom Software</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html"    class="footer-link">About Us</a>
+          <a href="portfolio.html"class="footer-link">Portfolio</a>
+          <a href="blog.html"     class="footer-link">Blog</a>
+          <a href="careers.html"  class="footer-link">Careers</a>
+          <a href="contact.html"  class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a href="solutions.html"     class="footer-link">Solutions</a>
+          <a href="industries.html"    class="footer-link">Industries</a>
+          <a href="technologies.html"  class="footer-link">Technology Stack</a>
+          <a href="contact.html"       class="footer-link">Get a Quote</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Digital Storm Technologies. All rights reserved. | Nairobi, Kenya</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social-btn" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="footer-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
       </div>
     </div>
-  </header>
+  </div>
+</footer>
 
-  <main>
-    <section class="page-banner">
-      <div class="container">
-        <div class="section-tag">SERVICES & ARCHITECTURE</div>
-        <h1 class="page-banner-title">Enterprise Software Capabilities</h1>
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> <span>/</span> <span style="color:#FFF;">Services</span>
-        </div>
-      </div>
-    </section>
+<button id="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
-    <!-- MAIN SERVICES DEEP DIVE -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header reveal-up">
-          <div class="section-tag">ALL 9 ENTERPRISE PILLARS</div>
-          <h2 class="section-title">Built Without Legacy Templates</h2>
-          <p class="section-desc">We handcraft every module in .NET 8, C#, Blazor, and vanilla ES2024 for maximum performance across African telecommunication networks.</p>
-        </div>
-
-        <div class="grid-2" style="gap: 3rem;">
-          <!-- 1. Enterprise Software -->
-          <div class="glass-card reveal-up" id="enterprise-software">
-            <div class="card-icon-wrap"><i class="fa-solid fa-building-columns"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">1. Enterprise Software Suite</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              We architect comprehensive, modular enterprise platforms that replace disconnected legacy spreadsheets and slow imports:
-            </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.75rem; font-size: 0.92rem;">
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Custom Core ERP</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Institutional CRM</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Hospital EHR Systems</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> School & Campus Systems</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Biometric Retail POS</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Payroll & Statutory Tax</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Inventory & Pro-Silo</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> GPS Fleet & Logistics</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Actuarial Insurance</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> SACCO & Microfinance</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Government Tax Portals</div>
-              <div><i class="fa-solid fa-check" style="color:var(--orange)"></i> Treasury Ledgers</div>
-            </div>
-            <a href="contact.html?service=erp" class="btn btn-primary">
-              <i class="fa-solid fa-code"></i> Request Module Demo
-            </a>
-          </div>
-
-          <!-- 2. AI Solutions -->
-          <div class="glass-card reveal-up" id="ai-solutions">
-            <div class="card-icon-wrap"><i class="fa-solid fa-brain"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">2. AI & Machine Learning Solutions</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              Deploy sovereign AI agents trained on institutional data without sending sensitive citizen or financial records to foreign public clouds:
-            </p>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.75rem; font-size: 0.95rem;">
-              <li><i class="fa-solid fa-sparkles" style="color:var(--orange)"></i> <strong>MUMCARE Diagnostic Triage AI:</strong> Predictive risk flags for maternity clinics.</li>
-              <li><i class="fa-solid fa-sparkles" style="color:var(--orange)"></i> <strong>ICTAMS NLP Customs Auditor:</strong> Automated invoice anomaly & fraud detection.</li>
-              <li><i class="fa-solid fa-sparkles" style="color:var(--orange)"></i> <strong>SACCO Automated Credit Scoring:</strong> 90-second SMS micro-lending decisions.</li>
-            </ul>
-            <a href="contact.html?service=ai" class="btn btn-secondary">
-              <i class="fa-solid fa-microchip"></i> Explore AI Pipelines
-            </a>
-          </div>
-
-          <!-- 3. Cloud Solutions -->
-          <div class="glass-card reveal-up" id="cloud-solutions">
-            <div class="card-icon-wrap"><i class="fa-solid fa-cloud"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">3. Sovereign Cloud & Hybrid Infrastructure</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              We architect multi-region high-availability cloud meshes across AWS Africa (Cape Town), Azure, and sovereign government data centers with sub-millisecond edge failover.
-            </p>
-            <div style="font-family:var(--font-code); font-size:0.85rem; color:#4ADE80; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
-              [SYSTEM SLAS]<br/>
-              99.99% UPTIME GUARANTEE • GEO-REDUNDANT REPLICATION • ZERO DATA RESIDENCY VIOLATIONS
-            </div>
-            <a href="contact.html?service=cloud" class="btn btn-secondary">
-              <i class="fa-solid fa-network-wired"></i> Review Cloud SLAs
-            </a>
-          </div>
-
-          <!-- 4. Cybersecurity -->
-          <div class="glass-card reveal-up" id="cybersecurity">
-            <div class="card-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">4. Cybersecurity & Zero-Trust Defense</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              Securing sovereign African institutions against DDoS, credential stuffing, and insider threats via MTLS microsegmentation, biometric identity, and automated SOAR breach isolation.
-            </p>
-            <a href="contact.html?service=security" class="btn btn-secondary">
-              <i class="fa-solid fa-lock"></i> Request Security Audit
-            </a>
-          </div>
-
-          <!-- 5. DevOps & System Integration -->
-          <div class="glass-card reveal-up" id="devops">
-            <div class="card-icon-wrap"><i class="fa-solid fa-server"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">5. DevOps & System Integration</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              Continuous integration and Kubernetes GitOps pipelines that deploy self-healing containerized Blazor/Docker microservices with zero downtime deployments.
-            </p>
-            <a href="contact.html?service=devops" class="btn btn-secondary">
-              <i class="fa-solid fa-terminal"></i> Explore DevOps Matrix
-            </a>
-          </div>
-
-          <!-- 6. API Dev, Data Analytics & BI -->
-          <div class="glass-card reveal-up" id="api-bi">
-            <div class="card-icon-wrap"><i class="fa-solid fa-chart-line"></i></div>
-            <h3 style="font-size: 1.7rem; margin-bottom: 0.75rem;">6. API Development, Analytics & BI</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
-              High-velocity GraphQL, REST, and SignalR API gateways connecting core banking ledgers with mobile money networks (M-Pesa, MTN) and real-time executive dashboard BI analytics.
-            </p>
-            <a href="contact.html?service=bi" class="btn btn-secondary">
-              <i class="fa-solid fa-database"></i> View Analytics Demo
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom" style="border-top: none;">
-        <div>&copy; 2026 Digital Storm Technologies. All Rights Reserved.</div>
-        <div style="display:flex; gap:1.5rem;">
-          <a href="index.html">Home</a>
-          <a href="solutions.html">Solutions</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="contact.html">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/particles.js" defer></script>
-  <script src="js/portfolio.js" defer></script>
-  <script src="js/chatbot.js" defer></script>
-  <script src="js/animations.js" defer></script>
-  <script src="js/app.js" defer></script>
+<script src="js/app.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('nav-hamburger');
+    const drawer    = document.getElementById('nav-drawer');
+    if (hamburger && drawer) {
+      hamburger.addEventListener('click', () => {
+        const open = hamburger.classList.toggle('open');
+        drawer.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+    }
+  });
+</script>
 </body>
 </html>

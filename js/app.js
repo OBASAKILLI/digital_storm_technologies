@@ -10,15 +10,14 @@ const ThemeManager = (() => {
   const root = document.documentElement;
   const STORAGE_KEY = 'dst-theme';
 
-  // Swap images that have data-dark-src and data-light-src attributes
+  // Swap every theme-aware image to the correct src for the given theme
   function swapThemeImages(theme) {
     document.querySelectorAll('img[data-dark-src], img[data-light-src]').forEach(img => {
-      const dark  = img.dataset.darkSrc;
-      const light = img.dataset.lightSrc;
-      if (theme === 'light' && light) {
-        img.src = light;
-      } else if (theme === 'dark' && dark) {
-        img.src = dark;
+      const dark  = img.getAttribute('data-dark-src');
+      const light = img.getAttribute('data-light-src');
+      const target = theme === 'light' ? light : dark;
+      if (target && img.getAttribute('src') !== target) {
+        img.setAttribute('src', target);
       }
     });
   }
@@ -27,11 +26,12 @@ const ThemeManager = (() => {
     root.setAttribute('data-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
 
-    const icons = document.querySelectorAll('.theme-icon');
-    icons.forEach(icon => {
+    // Update theme icon
+    document.querySelectorAll('.theme-icon').forEach(icon => {
       icon.className = 'theme-icon fa-solid ' + (theme === 'light' ? 'fa-sun' : 'fa-moon');
     });
 
+    // Swap images immediately
     swapThemeImages(theme);
   }
 
@@ -43,7 +43,11 @@ const ThemeManager = (() => {
   function init() {
     const saved = localStorage.getItem(STORAGE_KEY);
     const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    apply(saved || preferred);
+    const theme = saved || preferred;
+    apply(theme);
+
+    // Also swap after all resources load (catches lazily rendered images)
+    window.addEventListener('load', () => swapThemeImages(theme));
 
     document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
       btn.addEventListener('click', toggle);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -22,6 +22,13 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Digital Storm Technologies" />
+  <meta property="og:description" content="Your Digital Partner - enterprise ERP, eTIMS integration, retail POS, and payment gateway solutions for businesses across Kenya." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/OBASAKILLI/digital_storm_technologies/main/assets/Digitalblack.png" />
+  <meta property="og:url" content="https://obasakilli.github.io/digital_storm_technologies/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
 
@@ -285,32 +292,20 @@
   <a href="careers.html" class="mobile-more-link" id="more-careers"><i class="fa-solid fa-user-tie"></i> Careers</a>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const moreBtn = document.getElementById('mobile-more-btn');
-    const moreMenu = document.getElementById('mobile-more-menu');
-    const overlay = document.getElementById('mobile-more-overlay');
-    const closeBtn = document.getElementById('mobile-more-close');
 
-    if(moreBtn && moreMenu && overlay) {
-      const openMenu = () => {
-        overlay.classList.add('open');
-        moreMenu.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      };
-      
-      const closeMenu = () => {
-        overlay.classList.remove('open');
-        moreMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      };
-
-      moreBtn.addEventListener('click', openMenu);
-      closeBtn.addEventListener('click', closeMenu);
-      overlay.addEventListener('click', closeMenu);
-    }
-  });
-</script>
+<a href="https://wa.me/254799092727" class="whatsapp-widget" target="_blank" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-text">
+    We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our site, you consent to our use of cookies. 
+    <a href="privacy.html">Learn more</a>.
+  </div>
+  <button class="btn btn-primary" id="cookie-accept">Accept & Close</button>
+</div>
 </body>
 </html>
+
+
+
+
 

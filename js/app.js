@@ -277,3 +277,133 @@ document.addEventListener('DOMContentLoaded', () => {
   ContactForm.init();
   BackToTop.init();
 });
+
+/* ==========================================================================
+   VIEW TRANSITIONS API (Native App Feel)
+   ========================================================================== */
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (!link || !link.href) return;
+  
+  const url = new URL(link.href);
+  if (url.origin !== location.origin || url.pathname === location.pathname) return;
+  
+  // Exclude external links or anchor links
+  if (link.target === '_blank' || link.getAttribute('href').startsWith('#')) return;
+
+  e.preventDefault();
+
+  const navigate = async () => {
+    try {
+      const response = await fetch(url.href);
+      const htmlString = await response.text();
+      const parser = new DOMParser();
+      const newDoc = parser.parseFromString(htmlString, 'text/html');
+      
+      // We swap the entire body to ensure nav active states update properly
+      document.body.innerHTML = newDoc.body.innerHTML;
+      
+      // Update title and URL
+      document.title = newDoc.title;
+      window.history.pushState({}, '', url.href);
+      
+      // Re-run any necessary scripts (like theme toggler wire-up if they exist inline)
+      // Since our app.js is already loaded, we might need to re-bind events
+      bindEvents(); 
+      
+      window.scrollTo(0, 0);
+    } catch (err) {
+      console.error('Failed to fetch page for transition', err);
+      window.location.assign(url.href); // Fallback
+    }
+  };
+
+  if (!document.startViewTransition) {
+    navigate();
+  } else {
+    document.startViewTransition(() => navigate());
+  }
+});
+
+// Since we swap the body, we need to ensure event listeners are bound to the document
+// or re-bound after swap. 
+// We will wrap our wireups in bindEvents()
+function bindEvents() {
+  const hamburger = document.getElementById('nav-hamburger');
+  const drawer    = document.getElementById('nav-drawer');
+  if (hamburger && drawer) {
+    hamburger.onclick = () => {
+      const open = hamburger.classList.toggle('open');
+      drawer.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+  }
+  
+  const themeBtn = document.getElementById('theme-toggle');
+  if (themeBtn) {
+    // Basic wireup
+    themeBtn.onclick = () => {
+       const current = document.documentElement.getAttribute('data-theme') || 'light';
+       document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    };
+  }
+
+  // Mobile 'More' menu logic
+  const moreBtn = document.getElementById('mobile-more-btn');
+  const moreMenu = document.getElementById('mobile-more-menu');
+  const overlay = document.getElementById('mobile-more-overlay');
+  const closeBtn = document.getElementById('mobile-more-close');
+
+  if(moreBtn && moreMenu && overlay) {
+    moreBtn.onclick = () => {
+      overlay.classList.add('open');
+      moreMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeMenu = () => {
+      overlay.classList.remove('open');
+      moreMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    closeBtn.onclick = closeMenu;
+    overlay.onclick = closeMenu;
+  }
+}
+
+// Initial bind
+document.addEventListener('DOMContentLoaded', bindEvents);
+
+// Handle back/forward buttons
+window.addEventListener('popstate', () => {
+  if (document.startViewTransition) {
+    document.startViewTransition(async () => {
+      const response = await fetch(location.href);
+      const htmlString = await response.text();
+      const newDoc = new DOMParser().parseFromString(htmlString, 'text/html');
+      document.body.innerHTML = newDoc.body.innerHTML;
+      document.title = newDoc.title;
+      bindEvents();
+    });
+  } else {
+    window.location.reload();
+  }
+});
+
+// Cookie Banner Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const banner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  
+  if (banner && acceptBtn) {
+    if (!localStorage.getItem('cookie_consent')) {
+      setTimeout(() => {
+        banner.classList.add('show');
+      }, 1500); // delay before showing
+    }
+
+    acceptBtn.onclick = () => {
+      localStorage.setItem('cookie_consent', 'true');
+      banner.classList.remove('show');
+    };
+  }
+});

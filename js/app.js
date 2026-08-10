@@ -222,19 +222,26 @@ const ContactForm = (() => {
     const form = document.querySelector('#contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      const name = form.querySelector('[name="name"]')?.value || '';
+      const email = form.querySelector('[name="email"]')?.value || '';
+      const phone = form.querySelector('[name="phone"]')?.value || '';
+      const message = form.querySelector('[name="message"]')?.value || '';
+      
+      const subject = encodeURIComponent(`New Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`);
+      
+      // Open the user's email client
+      window.location.href = `mailto:emmanukiptoo98@gmail.com?subject=${subject}&body=${body}`;
+      
       const btn = form.querySelector('[type="submit"]');
       const original = btn.innerHTML;
 
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      btn.innerHTML = '<i class="fa-solid fa-envelope"></i> Opening Mail Client...';
+      btn.style.background = 'var(--orange)';
       btn.disabled = true;
-
-      // Simulate async send (replace with real endpoint)
-      await new Promise(r => setTimeout(r, 1800));
-
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
-      btn.style.background = 'var(--green)';
 
       setTimeout(() => {
         btn.innerHTML = original;

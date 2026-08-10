@@ -1137,13 +1137,13 @@ ul, ol { list-style: none; }
 
 .testimonial-avatar {
   width: 44px; height: 44px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bg-card); border: 2px solid var(--orange);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
-  color: #fff;
+  color: var(--orange);
   flex-shrink: 0;
 }
 
@@ -1459,4 +1459,5 @@ ul, ol { list-style: none; }
   background: var(--orange-dark);
   transform: translateY(-3px);
 }
+
 

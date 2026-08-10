@@ -22,6 +22,15 @@
     .blog-excerpt { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1; }
     .blog-link { color: var(--orange); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
   </style>
+  <!-- CRITICAL: Apply saved theme before first paint to avoid flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('dst-theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      var theme = saved || preferred;
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -215,3 +224,4 @@
 </script>
 </body>
 </html>
+

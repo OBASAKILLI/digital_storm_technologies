@@ -4,26 +4,27 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   THEME-AWARE IMAGE FILTER
-   When real light-mode images are not yet available, CSS filter converts
-   dark dashboard screenshots into clean white-UI versions.
-   Once data-light-src images are added, this filter is superseded.
+   1. GOOGLE FONTS IMPORT (must be first rule)
    -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* --------------------------------------------------------------------------
+   THEME-AWARE PROJECT IMAGE FILTER
+   CSS filter converts dark dashboard screenshots to light mode appearance.
+   When a real light-mode image is available via data-light-src, the JS will
+   swap src and this filter becomes irrelevant for that image.
+   -------------------------------------------------------------------------- */
+img.theme-img {
+  transition: filter 0.4s ease, opacity 0.3s ease;
+}
+
 [data-theme="light"] img.theme-img {
-  filter: invert(1) hue-rotate(180deg) saturate(0.9) brightness(1.05);
-  transition: filter 0.35s ease;
+  filter: invert(1) hue-rotate(180deg) saturate(0.85) brightness(1.1) contrast(0.95);
 }
 
 [data-theme="dark"] img.theme-img {
   filter: none;
-  transition: filter 0.35s ease;
 }
-
-
-/* --------------------------------------------------------------------------
-   1. GOOGLE FONTS IMPORT
-   -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* --------------------------------------------------------------------------
    2. CSS DESIGN TOKENS

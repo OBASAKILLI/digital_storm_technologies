@@ -1580,3 +1580,9 @@ ul, ol { list-style: none; }
   color: var(--orange);
 }
 
+.mobile-more-link.active {
+  color: var(--orange);
+}
+.mobile-more-link.active i {
+  color: var(--orange);
+}

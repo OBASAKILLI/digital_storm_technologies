@@ -200,10 +200,6 @@
   });
 </script>
 
-</html>
-
-
-
 
 
 <!-- Mobile App Bottom Navigation -->
@@ -212,7 +208,7 @@
   <a href="services.html" class="mobile-nav-item" id="nav-services"><i class="fa-solid fa-layer-group"></i><span>Services</span></a>
   <a href="portfolio.html" class="mobile-nav-item" id="nav-portfolio"><i class="fa-solid fa-briefcase"></i><span>Portfolio</span></a>
   <a href="contact.html" class="mobile-nav-item" id="nav-contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
-  <button class="mobile-nav-item" id="mobile-more-btn" style="background:none;border:none;"><i class="fa-solid fa-bars"></i><span>More</span></button>
+  <button class="mobile-nav-item active" id="mobile-more-btn" style="background:none;border:none;cursor:pointer;"><i class="fa-solid fa-bars"></i><span>More</span></button>
 </nav>
 
 <!-- Mobile App "More" Menu Modal -->
@@ -220,14 +216,14 @@
 <div class="mobile-more-menu" id="mobile-more-menu">
   <div class="mobile-more-menu-header">
     <div class="mobile-more-menu-title">Menu</div>
-    <button class="mobile-more-close" id="mobile-more-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+    <button class="mobile-more-close" id="mobile-more-close" aria-label="Close menu" style="cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
   </div>
-  <a href="about.html" class="mobile-more-link"><i class="fa-solid fa-users"></i> About Us</a>
-  <a href="solutions.html" class="mobile-more-link"><i class="fa-solid fa-industry"></i> Solutions</a>
-  <a href="industries.html" class="mobile-more-link"><i class="fa-solid fa-building"></i> Industries</a>
-  <a href="technologies.html" class="mobile-more-link"><i class="fa-solid fa-microchip"></i> Tech Stack</a>
-  <a href="blog.html" class="mobile-more-link"><i class="fa-solid fa-newspaper"></i> Blog</a>
-  <a href="careers.html" class="mobile-more-link"><i class="fa-solid fa-user-tie"></i> Careers</a>
+  <a href="about.html" class="mobile-more-link" id="more-about"><i class="fa-solid fa-users"></i> About Us</a>
+  <a href="solutions.html" class="mobile-more-link" id="more-solutions"><i class="fa-solid fa-industry"></i> Solutions</a>
+  <a href="industries.html" class="mobile-more-link" id="more-industries"><i class="fa-solid fa-building"></i> Industries</a>
+  <a href="technologies.html" class="mobile-more-link active" id="more-technologies"><i class="fa-solid fa-microchip"></i> Tech Stack</a>
+  <a href="blog.html" class="mobile-more-link" id="more-blog"><i class="fa-solid fa-newspaper"></i> Blog</a>
+  <a href="careers.html" class="mobile-more-link" id="more-careers"><i class="fa-solid fa-user-tie"></i> Careers</a>
 </div>
 
 <script>
@@ -257,3 +253,4 @@
   });
 </script>
 </body>
+</html>

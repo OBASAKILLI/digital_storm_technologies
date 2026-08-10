@@ -4,6 +4,23 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   THEME-AWARE IMAGE FILTER
+   When real light-mode images are not yet available, CSS filter converts
+   dark dashboard screenshots into clean white-UI versions.
+   Once data-light-src images are added, this filter is superseded.
+   -------------------------------------------------------------------------- */
+[data-theme="light"] img.theme-img {
+  filter: invert(1) hue-rotate(180deg) saturate(0.9) brightness(1.05);
+  transition: filter 0.35s ease;
+}
+
+[data-theme="dark"] img.theme-img {
+  filter: none;
+  transition: filter 0.35s ease;
+}
+
+
+/* --------------------------------------------------------------------------
    1. GOOGLE FONTS IMPORT
    -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');

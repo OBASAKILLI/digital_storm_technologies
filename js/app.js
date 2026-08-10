@@ -10,6 +10,19 @@ const ThemeManager = (() => {
   const root = document.documentElement;
   const STORAGE_KEY = 'dst-theme';
 
+  // Swap images that have data-dark-src and data-light-src attributes
+  function swapThemeImages(theme) {
+    document.querySelectorAll('img[data-dark-src], img[data-light-src]').forEach(img => {
+      const dark  = img.dataset.darkSrc;
+      const light = img.dataset.lightSrc;
+      if (theme === 'light' && light) {
+        img.src = light;
+      } else if (theme === 'dark' && dark) {
+        img.src = dark;
+      }
+    });
+  }
+
   function apply(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
@@ -18,6 +31,8 @@ const ThemeManager = (() => {
     icons.forEach(icon => {
       icon.className = 'theme-icon fa-solid ' + (theme === 'light' ? 'fa-sun' : 'fa-moon');
     });
+
+    swapThemeImages(theme);
   }
 
   function toggle() {
